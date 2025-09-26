@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script displays listening TCP/UDP ports with PID/Program
+
+# Show listening TCP/UDP sockets with PID/program name
+sudo ss -tulnp
