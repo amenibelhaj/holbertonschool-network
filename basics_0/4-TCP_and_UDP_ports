@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script displays listening TCP/UDP ports with PID/Program
+# Display listening sockets with associated PID and program name
 
-# Show listening TCP/UDP sockets with PID/program name
-sudo netstat -tulpn
+sudo netstat -tulnp --listening
+sudo netstat -xlp --listening
