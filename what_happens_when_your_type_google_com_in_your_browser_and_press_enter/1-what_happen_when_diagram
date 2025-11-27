@@ -1,0 +1,38 @@
+Diagram URL: [Paste your Gliffy / draw.io diagram URL here]
+
+Optional ASCII guide (for your reference when creating the diagram):
+
+User Browser
+      |
+      v
++------------------+
+|      DNS         |
++------------------+
+      |
+      v
++------------------+
+| Firewall         |
++------------------+
+      |
+      v
++------------------+
+| Load Balancer    |
++------------------+
+      |
+      v
++------------------+       +------------------+
+| Web Server       | <---> | Application Server|
++------------------+       +------------------+
+                                 |
+                                 v
+                         +------------------+
+                         | Database         |
+                         +------------------+
+
+Additional Notes:
+- Traffic is encrypted via HTTPS/SSL from User to Load Balancer.
+- DNS resolution happens first to get the server IP.
+- Firewall filters traffic before it reaches the servers.
+- Load Balancer distributes requests to multiple web servers.
+- Web Server serves static content, Application Server generates dynamic content.
+- Application Server queries the database to build the response.

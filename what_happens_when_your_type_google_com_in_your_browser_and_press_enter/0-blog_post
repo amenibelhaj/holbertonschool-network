@@ -1,0 +1,36 @@
+Title: What Happens When You Type https://www.google.com in Your Browser
+
+Have you ever wondered what happens behind the scenes when you type https://www.google.com into your browser and press Enter? Let’s break it down step by step.
+
+1. DNS Request
+The browser first needs to translate the human-readable domain “www.google.com” into an IP address. This is done using the **Domain Name System (DNS)**. The browser asks the DNS resolver configured on your machine, which queries multiple DNS servers if needed, until it finds the IP of Google's server.
+
+2. TCP/IP
+Once the IP is known, the browser opens a connection using **TCP/IP** to communicate with the Google server. TCP ensures reliable delivery of packets over the internet, while IP handles addressing and routing the packets to the correct server.
+
+3. Firewall
+During this process, firewalls on your machine, your network, and Google’s servers may filter traffic. Firewalls block unauthorized or malicious connections while allowing the legitimate HTTPS request to pass through.
+
+4. HTTPS/SSL
+Before sending sensitive data, your browser initiates a **TLS/SSL handshake** with the Google server. This establishes an encrypted connection using **HTTPS**, ensuring that data exchanged between your browser and the server is private and secure.
+
+5. Load Balancer
+Google uses multiple servers behind **load balancers**. The load balancer receives your request and distributes it to one of many web servers based on load, availability, or routing rules. This ensures fast response times and high availability.
+
+6. Web Server
+The request reaches a **web server** (for example, Nginx or proprietary Google web server). The web server handles static content like HTML, CSS, and images, or forwards dynamic requests to an application server.
+
+7. Application Server
+For dynamic content, the **application server** processes your request. It runs the backend logic, queries databases, processes user input, and generates the response.
+
+8. Database
+The application server may query a **database** to retrieve or store data. For example, retrieving your Google account information or search history. The database ensures persistent, organized storage of this information.
+
+9. Response
+Once the application server prepares the response, it is sent back through the web server, load balancer, and encrypted via HTTPS back to your browser. Your browser renders the content on the screen for you to see.
+
+Conclusion
+This simple action of typing a URL triggers a complex chain of events involving DNS resolution, TCP/IP connections, firewalls, HTTPS encryption, load balancers, web servers, application servers, and databases. Understanding this workflow is essential for web developers, SREs, and anyone working in modern web infrastructure.
+
+Medium/LinkedIn URL: [Paste the URL of your published blog post here]
+
